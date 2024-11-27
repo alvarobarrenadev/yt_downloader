@@ -1,13 +1,13 @@
 import yt_dlp
 
-def descargar_video_yt(url, formato='mp4'):
+def descargar_video_yt(url, formato='video'):
     opciones = {
         'format': 'bestvideo+bestaudio/best',
         'outtmpl': '%(title)s.%(ext)s',
         'postprocessors': [],
     }
 
-    if formato == 'mp3':
+    if formato == 'audio':
         opciones['postprocessors'] = [{
             'key': 'FFmpegExtractAudio',
             'preferredcodec': 'mp3',
@@ -24,5 +24,5 @@ def descargar_video_yt(url, formato='mp4'):
 
 if __name__ == "__main__":
     url = input("Introduce la URL del video de YouTube: ")
-    formato = input("¿En qué formato deseas descargar (mp4/mp3)?: ").lower()
+    formato = input("¿En qué formato deseas descargar (video/audio)?: ").lower()
     descargar_video_yt(url, formato)
