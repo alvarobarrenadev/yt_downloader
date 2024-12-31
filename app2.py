@@ -38,6 +38,5 @@ if __name__ == "__main__":
         ""
     ]
 
-
     formato = input("¿En qué formato deseas descargar (video/audio)?: ").lower()
     descargar_multiples_videos(urls, formato, num_hilos=10)
