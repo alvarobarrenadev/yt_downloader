@@ -35,8 +35,8 @@ def descargar_multiples_videos(urls, formato='video', num_hilos=4):
 
 if __name__ == "__main__":
     urls = [
-        ""
+        "",
     ]
 
     formato = input("¿En qué formato deseas descargar (video/audio)?: ").lower()
-    descargar_multiples_videos(urls, formato, num_hilos=10)
+    descargar_multiples_videos(urls, formato, num_hilos=2)
